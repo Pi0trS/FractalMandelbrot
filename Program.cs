@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 
@@ -60,9 +61,11 @@ namespace Fractal_mandelbrot
             return img;
 
         }
-
+        
         static void Main(string[] args)
         {
+            Bitmap obrazek = MandelbrotSet(1000, 1000, 2, -2, 2, -2);
+            obrazek.Save("test.jpg",ImageFormat.Jpeg);
         }
     }
 }
